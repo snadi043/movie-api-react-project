@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-bottom: 1px solid lightgray;
 }
+  
 
 .CoverImage{
   object-fit:contain;
@@ -54,18 +54,26 @@
   font-size: 36px;
   font-weight: 600;
   color: black;
-  background: rgb(167, 66, 66);
+  background: rgb(219, 22, 22);
   height: fit-content;
   padding: 8px;
   cursor: pointer;
   opacity: 0.8;
   text-align: center;
+  margin: 45px;
+  width: 92.4%
 }
 
 .Parent {
-  display: -webkit-inline-box;
-  flex-direction: row;
-  background-color: rgba(94, 89, 89, 0.59);
+  display: -webkit-inline-box; 
+  flex-direction: row; 
+  top: 22%;
+  position: fixed; 
+  height: auto;
+  z-index: 10;
+  background: rgb(213, 213, 210);
+  margin: 18px 45px;
+  width: 75%;
 }
 
 .child1 {
@@ -81,4 +89,14 @@
   height: 350px;
   margin: 50px;
   color: black;
+}
+
+
+.Modal {
+  position: fixed;
+  top: 10vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
 }

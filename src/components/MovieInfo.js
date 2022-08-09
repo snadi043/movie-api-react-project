@@ -14,6 +14,8 @@ const MovieInfo = (props) => {
     ).then((response) => setMovieInfo(response.data));
   }, [selectedMovie]);
   return (
+    
+    <div className="Modal">
     <div className="Container">
       {movieInfo ? (
         <>
@@ -71,6 +73,7 @@ const MovieInfo = (props) => {
       ) : (
         "Loading..."
       )}
+    </div>
     </div>
   );
 };
