@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 
 import Movie from "./components/Movie";
-import MovieInfo from "./components/MovieInfo";
+import Modal from "./components/Modal";
 import ScreenTime from './components/ScreenTime';
 import searchicon  from './searchicon.svg';
 import movieicon from './movieicon.svg';
@@ -54,7 +54,7 @@ const App = () => {
         </div>
       </div>
       
-      {selectedMovie && <MovieInfo selectedMovie={selectedMovie} onMovieSelect={onMovieSelect}/>}
+      {selectedMovie && <Modal selectedMovie={selectedMovie} onMovieSelect={onMovieSelect}/>}
       <div className="MovieListContainer">
         {movieList?.length ? (
           movieList.map((movie, index) => (
