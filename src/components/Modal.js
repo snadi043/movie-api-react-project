@@ -20,6 +20,7 @@ const Modal = (props) => {
     Axios.get(
       `https://www.omdbapi.com/?i=${selectedMovie}&apikey=${API_KEY}`,
     ).then((response) => setMovieInfo(response.data))
+    .catch((error)=>{alert(error.message)});
     },[selectedMovie]);
 
 
