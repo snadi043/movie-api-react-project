@@ -65,7 +65,10 @@ const App = () => {
             />
           ))
         ) : (
+          <div>
+          <h1>No Movies Found</h1>
           <img className="Placeholder" src={movieicon} alt="movie-icon" />
+          </div>
         )}
       </div>
     </div>

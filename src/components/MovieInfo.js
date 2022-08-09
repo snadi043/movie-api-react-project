@@ -17,42 +17,55 @@ const MovieInfo = (props) => {
     <div className="Container">
       {movieInfo ? (
         <>
-          <img className="CoverImage" src={movieInfo?.Poster} alt={movieInfo?.Title} />
-          <div className="InfoColumn">
+        <div className="Parent">
+        <div className="child1">
+        <img className="CoverImage" src={movieInfo?.Poster} alt={movieInfo?.Title} />
+        </div>
+        <div className="child2">
+            <h2>
             <span className="MovieName">
               {movieInfo?.Type}: <span>{movieInfo?.Title}</span>
             </span>
+            <br/>
             <span className="MovieInfo">
               IMDB Rating: <span>{movieInfo?.imdbRating}</span>
             </span>
+            <br/>
             <span className="MovieInfo">
               Year: <span>{movieInfo?.Year}</span>
             </span>
+            <br/>
             <span className="MovieInfo">
               Language: <span>{movieInfo?.Language}</span>
             </span>
+            <br/>
             <span className="MovieInfo">
               Rated: <span>{movieInfo?.Rated}</span>
             </span>
+            <br/>
             <span className="MovieInfo">
               Released: <span>{movieInfo?.Released}</span>
             </span>
+            <br/>
             <span className="MovieInfo">
               Runtime: <span>{movieInfo?.Runtime}</span>
             </span>
+            <br/>
             <span className="MovieInfo">
               Genre: <span>{movieInfo?.Genre}</span>
             </span>
+            <br/>
             <span className="MovieInfo">
               Director: <span>{movieInfo?.Director}</span>
             </span>
+            <br/>
             <span className="MovieInfo">
               Actors: <span>{movieInfo?.Actors}</span>
             </span>
-            <span className="MovieInfo">
-              Plot: <span>{movieInfo?.Plot}</span>
-            </span>
-          </div>
+            <br/>   
+            </h2>
+        </div>
+    </div> 
           <span className="Close" onClick={() => props.onMovieSelect()}>X</span>
         </>
       ) : (

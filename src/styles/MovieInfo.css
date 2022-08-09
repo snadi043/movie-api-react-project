@@ -6,8 +6,9 @@
 }
 
 .CoverImage{
-  object-fit: cover;
+  object-fit:contain;
   height: 350px;
+  margin: 25px;
 }
 
 .InfoColumn{
@@ -30,10 +31,12 @@
 
 .MovieName span{
     opacity: 0.8;
+    color: black;
   }
 
 .MovieInfo span {
     opacity: 0.5;
+    color: black;
   }
 
 .MovieInfo{
@@ -44,16 +47,38 @@
   margin: 4px 0;
   text-transform: capitalize;
   text-overflow: ellipsis;
+  text-align: center;
 }
 
 .Close{
-  font-size: 16px;
+  font-size: 36px;
   font-weight: 600;
   color: black;
-  background: lightgray;
+  background: rgb(167, 66, 66);
   height: fit-content;
   padding: 8px;
-  border-radius: 50%;
   cursor: pointer;
   opacity: 0.8;
+  text-align: center;
+}
+
+.Parent {
+  display: -webkit-inline-box;
+  flex-direction: row;
+  background-color: rgba(94, 89, 89, 0.59);
+}
+
+.child1 {
+  width: 40%;
+  height: 350px;
+  text-align: center;
+  padding: 35px;
+}
+
+.child2 {
+  width: 60%;
+  padding: 10px;
+  height: 350px;
+  margin: 50px;
+  color: black;
 }
