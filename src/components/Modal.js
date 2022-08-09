@@ -13,6 +13,17 @@ const Modal = (props) => {
       `https://www.omdbapi.com/?i=${selectedMovie}&apikey=${API_KEY}`,
     ).then((response) => setMovieInfo(response.data));
   }, [selectedMovie]);
+
+  const nextData = (event) => {
+  let movieInfo = 0;
+  setMovieInfo(movieInfo + 1);
+  console.log(event);
+  }
+
+  const prevData = () => {
+  let movieInfo = 0;
+  setMovieInfo(movieInfo - 1);
+  }
   return (
     
     <div className="Modalbox">
@@ -65,10 +76,13 @@ const Modal = (props) => {
               Actors: <span>{movieInfo?.Actors}</span>
             </span>
             <br/>   
+            <button type="button" onClick={nextData}>NEXT</button>
+            <button type="button" onClick={prevData}>PREVIOUS</button>
             </h2>
         </div>
     </div> 
           <span className="Close" onClick={() => props.onMovieSelect()}>X</span>
+         
         </>
       ) : (
         "Loading..."
