@@ -7,27 +7,47 @@ import '../styles/Modal.css';
 const Modal = (props) => {
   const [movieInfo, setMovieInfo] = useState();
   const { selectedMovie } = props;
+  const movieList = props.movieList;
+  const movieArray = [];
+
+  movieList.forEach(element => {
+    movieArray.push(element);
+  });
+  
 
   useEffect(() => {
+
     Axios.get(
       `https://www.omdbapi.com/?i=${selectedMovie}&apikey=${API_KEY}`,
-    ).then((response) => setMovieInfo(response.data));
-  }, [selectedMovie]);
+    ).then((response) => setMovieInfo(response.data))
+    },[selectedMovie]);
 
-  const nextData = (event) => {
-  let movieInfo = 0;
-  setMovieInfo(movieInfo + 1);
-  console.log(event);
+
+  const  prevData = () => {
+    if(movieInfo === 0){ 
+      return
+    }
+    else{
+    setMovieInfo(movieInfo - 1);
+    console.log(movieArray);
+  }
+}
+
+  const nextData = () => {
+    if(movieInfo === movieArray.length -1){
+      setMovieInfo(0);
+    }
+    else{
+      setMovieInfo(movieInfo + 1);
+    }
   }
 
-  const prevData = () => {
-  let movieInfo = 0;
-  setMovieInfo(movieInfo - 1);
-  }
   return (
+
     
     <div className="Modalbox">
     <div className="Container">
+
       {movieInfo ? (
         <>
         <div className="Parent">
@@ -79,6 +99,7 @@ const Modal = (props) => {
             <button type="button" onClick={nextData}>NEXT</button>
             <button type="button" onClick={prevData}>PREVIOUS</button>
             </h2>
+    
         </div>
     </div> 
           <span className="Close" onClick={() => props.onMovieSelect()}>X</span>

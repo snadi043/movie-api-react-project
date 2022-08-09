@@ -54,7 +54,11 @@ const App = () => {
         </div>
       </div>
       
-      {selectedMovie && <Modal selectedMovie={selectedMovie} onMovieSelect={onMovieSelect}/>}
+      {selectedMovie && <Modal 
+      selectedMovie={selectedMovie} 
+      onMovieSelect={onMovieSelect} 
+      movieList={movieList}
+      />}
       <div className="MovieListContainer">
         {movieList?.length ? (
           movieList.map((movie, index) => (
