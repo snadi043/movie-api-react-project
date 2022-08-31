@@ -6,6 +6,7 @@
   box-shadow: 0 3px 10px 0 #aaa;
   cursor: pointer;
   background-color: #8988;
+  color:aquamarine;
 }
 
 .CoverImage{
@@ -16,11 +17,12 @@
 .MovieName{
   font-size: 18px;
   font-weight: 600;
-  color: black;
+  color: rgba(85, 162, 140, 0.133);
   margin: 15px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: center;
 }
 
 .InfoColumn{
@@ -32,7 +34,7 @@
 .MovieInfo{
   font-size: 16px;
   font-weight: 500;
-  color: black;
+  color: rgba(190, 80, 80, 0.691);
   white-space: nowrap;
   overflow: hidden;
   text-transform: capitalize;
